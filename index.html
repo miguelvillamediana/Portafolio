@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Miguel Villamediana | Front-End Developer</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel='stylesheet' id='libs-css'  href='css/main.css' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='js/wp.json' />
+<script src="js/pages_change.js"></script>
+
+    <script class="svg__template" type="text/x-handlebars-template">
+        <span class="dynamic-link__animated">
+        <div class="dynamic-link__wrapper dynamic-link-{{index}}">
+            {{#if video}}
+            <video src="{{video}}" type="video/mp4" muted="muted" preload="auto" loop="loop" style="margin-top: 0px;"></video>
+            {{else if image}}
+            <img src="{{image}}">
+            {{else if target}}
+            <canvas></canvas>
+            {{/if}}
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" id="dynamic-link__svg-{{index}}" width="100%" height="100%"
+             preserveAspectRatio="xMidYMid slice">
+            <style>
+                .dynamic-link-{{index}} {
+                    -webkit-clip-path: url(#dynamic-link__mask-{{index}})  ;
+                    clip-path: url(#dynamic-link__mask-{{index}})  ;
+                }
+            </style>
+            <defs>
+                <clipPath id="dynamic-link__mask-{{index}}" x="0" y="0" width="100%" height="100%">
+                    <text text-anchor="center" alignment-baseline="central" width="100%" height="100%" x="50%" y="50%">
+                        {{text}}
+                    </text>
+                </clipPath>
+            </defs>
+            <text text-anchor="center" width="100%" height="100%" x="50%" y="50%">
+                <tspan style="opacity: 0;">{{text}}</tspan>
+            </text>
+        </svg>
+    </span>
+    </script>
+</head>
+<body class="-loading -page-home -is-white -press-cursor">
+
+<div class="preloader">
+    <div class="preloader__container">
+        <div class="preloader__line preloader-line -loading"></div>
+    </div>
+</div>
+
+<div class="header">
+    <div class="header__logo">
+        <a href="index.html" class="root-link animated-logo new">
+            <span class="animated-word">Miguel Villamediana |&nbsp;</span><span class="animated-word">Portafolio</span>
+        </a>
+    </div>
+
+    <div class="header__menu">
+        <div class="header__case-icon case-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header__menu-icon menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<section class="promo noselect" data-case="0">
+    <!-- content -->
+	    <div class="promo__content">
+        <!-- item -->
+        <div class="promo-hint">
+            <div class="promo-hint__line newdown">
+                Haz click y arrastra
+            </div>
+        </div>
+        <!--<div class="promo__button">
+        </div>-->
+        <div class="promo-video">
+            <div class="promo-video__wrapper">
+				                    <div class="promo-video__item">
+                        <div class="promo-video__box">
+                        <video src="videos/taxiblu.mp4" type="video/mp4" muted="muted"
+                               class="dynamic-target" data-name="taxiblu" playsinline muted preload="auto" loop="loop"></video>
+                        </div>
+                    </div>
+				                    <div class="promo-video__item">
+                        <div class="promo-video__box">
+                        <video src="videos/patagonien.mp4" type="video/mp4" muted="muted"
+                               class="dynamic-target" data-name="patagonien" playsinline muted preload="auto" loop="loop"></video>
+                        </div>
+                    </div>
+				                    <div class="promo-video__item">
+                        <div class="promo-video__box">
+                        <video src="videos/hospital.mp4" type="video/mp4" muted="muted"
+                               class="dynamic-target" data-name="hospital" playsinline muted preload="auto" loop="loop"></video>
+                        </div>
+                    </div>
+				                    <div class="promo-video__item">
+                        <div class="promo-video__box">
+                        <video src="videos/vainillas.mp4" type="video/mp4" muted="muted"
+                               class="dynamic-target" data-name="vainillas" playsinline muted preload="auto" loop="loop"></video>
+                        </div>
+                    </div>
+				                    <div class="promo-video__item">
+                        <div class="promo-video__box">
+                        <video src="videos/diseñoweb.mp4" type="video/mp4" muted="muted"
+                               class="dynamic-target" data-name="otros" playsinline muted preload="auto" loop="loop"></video>
+                        </div>
+                    </div>
+				            </div>
+
+            <div class="promo-video__slider">
+                <div class="promo-slider__wrapper">
+					                        <div class="promo-slider__item">
+                            <span class="promo-slider__link">TaxiBlu.ve</span>
+                        </div>
+					                        <div class="promo-slider__item">
+                            <span class="promo-slider__link">Patagonien Rent</span>
+                        </div>
+					                        <div class="promo-slider__item">
+                            <span class="promo-slider__link">Banco de sangre</span>
+                        </div>
+					                        <div class="promo-slider__item">
+                            <span class="promo-slider__link">Vainillas Cake</span>
+                        </div>
+					                        <div class="promo-slider__item">
+                            <span class="promo-slider__link">Otros desarrollos</span>
+                        </div>
+					                </div>
+            </div>
+        </div>
+        <div class="promo-slider noselect case-banner-content">
+            <div class="promo-slider__wrapper">
+				                    <div class="promo-slider__item">
+                        <span class="promo-slider__link">TaxiBlu.ve</span>
+                    </div>
+				                    <div class="promo-slider__item">
+                        <span class="promo-slider__link">Patagonien Rent</span>
+                    </div>
+				                    <div class="promo-slider__item">
+                        <span class="promo-slider__link">Banco de sangre</span>
+                    </div>
+				                    <div class="promo-slider__item">
+                        <span class="promo-slider__link">Vainillas Cake</span>
+                    </div>
+				                    <div class="promo-slider__item">
+                        <span class="promo-slider__link">Otros desarrollos</span>
+                    </div>
+				            </div>
+        </div>
+
+        <div class="promo-slider__fake case-banner-content">
+            <div class="promo-slider__wrapper">
+                <div class="promo-slider__item" data-href="#taxiblu"
+                    data-color="#4c98f8"
+                    data-menu_color="#4680c8">
+                </div>                                    
+                <div class="promo-slider__item" data-href="#patagonien"
+                    data-color="#77DF79"
+                    data-menu_color="#5e543e">
+                    
+                </div>
+                <div class="promo-slider__item" data-href="#razzetti"
+                data-color="#B29DD9"
+                data-menu_color="#1d253b">
+            </div>
+				<div class="promo-slider__item" data-href="#vainillas"
+                    data-color="#e2b63f"
+                    data-menu_color="#c69f40">
+                </div>
+				<div class="promo-slider__item" data-href="#otros"
+                    data-color="#ACECD5"
+                    data-menu_color="#686251">
+                </div>
+	       </div>
+        </div>
+    </div>
+    <!--<div class="promo__counter">
+		<div class="promo__counter__content">
+		1/5
+		</div>
+	</div>-->
+    <!-- content -->
+</section>
+
+<div class="page">
+    <div class="page__wrapper page-wrapper">
+        <div class="header__title column is-6 is-offset-3 ">
+            <span class="animated-title"></span>
+        </div>
+
+    <section class="case">
+        <div class="case__wrapper">
+asd
+        </div>
+    </section>
+    <section class="content">
+    </section>
+
+</div>
+</div>
+<div class="footer noselect">
+    <div class="footer__status">
+        <a href="mailto:jose.villamediana.osorio@gmail.com?subject=Email para MV Desing">
+            <div class="clock">
+                <span class="clock__hand clock__hand_minutes js-clock-minutes"></span>
+                <span class="clock__hand clock__hand_hours js-clock-hours"></span>
+            </div>
+            <span>Estamos Online</span></a>
+    </div>
+    <div class="footer__hello">
+        <a href="mailto:jose.villamediana.osorio@gmail.com?subject=Email para MV Desing" class="hover-link">+(55) 53-984744378</a>
+    </div>
+</div>
+<nav class="menu dark">
+    <div class="menu__back">
+
+                <div class="menu__back__image menu-image">
+        <img src='images/perfil.jpg'>
+        </div>
+
+    </div>
+    <div>
+    <menu class="menu__content">
+	    <div class="menu__inner">
+            <div class='menu__container'>
+                <div class='dynamic-link' data-image='' style="cursor:default">
+                    <div class="yo">
+                        <span class="intro">¡Hola!</span>
+                        <br>
+                        <span>
+                            Soy Josè Miguel Villamediana Osorio, soy diseñador <i>Front-End</i> de
+                            aplicativos y pàginas web, trabajo en HTML, CSS, Javascript, PHP, MySql, C#,
+                            y Android (JAVA), me gradue en Ingenieria en Informàtica hace 5 años y 
+                            !me encanta!. Puedo diseñar y desarrollar cualquier cosa que tengas en mente,
+                            amo la inteligencia artifical y la innovaciòn. 
+                            Estoy ansioso por participar activamente en tu idea. ¡Contactame!
+                            +(55)53-984744378 
+                        </span>
+                    </div>
+                </div>
+                <center>
+                    <div class="divbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                          <defs>
+                            <filter id="goo">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                              <feComposite in="SourceGraphic" in2="goo" />
+                            </filter>
+                          </defs>
+                        </svg>
+                        <span class="button--bubble__container">
+                          <a href="#" class="button button--bubble" onclick="window.open('documentos/Curriculum.pdf')">
+                            Mi curriculum
+                          </a>
+                          <span class="button--bubble__effect-container">
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                      
+                            <span class="button effect-button"></span>
+                      
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                          </span>
+                        </span>
+                      </div>
+    
+                </center>
+            </div>
+</div>    </menu>
+</nav>
+
+<script type='text/javascript' src='js/main.js'></script>
+<script type='text/javascript' src='js/button.js'></script>
+</body>
+</html>
